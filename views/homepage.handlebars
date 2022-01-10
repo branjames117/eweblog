@@ -1,7 +1,13 @@
-<ol class='post-list'>
+{{#if posts}}
+ <ol class='post-list'>
   {{#each posts as |post|}}
     <li>
      {{> post-info post }}
     </li>
   {{/each}}
 </ol>
+{{else}}
+<p>No posts have been published yet.</p>
+<p>Be the first! {{#if loggedIn}}Visit your <a href="/dash">Dashboard</a> to create a new post.{{else}}<a href="/login">Sign up</a> or <a href="/login">log in</a> to create a new post!{{/if}}</p>
+{{/if}}
+
