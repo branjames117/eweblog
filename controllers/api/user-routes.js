@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
     where: { id },
     include: [
       // include user's posts,
-      { model: Post, attributes: ['id', 'title', 'content'] },
+      { model: Post, attributes: ['id', 'title', 'content', 'created_at'] },
       // include user's comments
       {
         model: Comment,
