@@ -67,6 +67,9 @@ router.get('/:id', (req, res) => {
 // create new post
 router.post('/', withAuth, (req, res) => {
   // req.body must include title, content, and user_id
+  // add session user ID to the req.body
+  req.body.user_id = req.session.user_id;
+
   Post.create(req.body)
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {

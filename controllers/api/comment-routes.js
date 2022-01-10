@@ -16,6 +16,8 @@ router.get('/', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   // if (req.session) {
   // req.body must include comment_text, post_id, user_id
+  req.body.user_id = req.session.user_id;
+
   Comment.create(req.body)
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
