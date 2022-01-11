@@ -2,7 +2,7 @@
  <ul class='post-list'>
   {{#each posts as |post|}}
     <li>
-     {{> post-info post }}
+     {{> bullet-info post }}
     </li>
   {{/each}}
 </ul>
@@ -11,3 +11,4 @@
 <p>Be the first! {{#if loggedIn}}Visit your <a href="/dash">Dashboard</a> to create a new post.{{else}}<a href="/signup">Sign up</a> or <a href="/login">log in</a> to create a new post!{{/if}}</p>
 {{/if}}
 
+<script src='/js/fadein.js'></script>

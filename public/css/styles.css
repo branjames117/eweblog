@@ -154,7 +154,15 @@ ul {
   line-height: 150%;
 }
 
-.post .title span {
+.bullet {
+  opacity: 0;
+  margin-bottom: 2%;
+  line-height: 150%;
+  transition: opacity 1s linear;
+}
+
+.post .title span,
+.bullet .title span {
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;

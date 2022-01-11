@@ -21,6 +21,8 @@ async function editFormHandler(e) {
   }
 }
 
-document
-  .querySelector('.edit-post-form')
-  .addEventListener('submit', editFormHandler);
+const canEditPost = document.querySelector('.edit-post-form');
+
+if (canEditPost) {
+  canEditPost.addEventListener('submit', editFormHandler);
+}
