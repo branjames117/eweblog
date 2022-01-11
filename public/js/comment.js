@@ -9,6 +9,13 @@ async function commentFormHandler(e) {
     window.location.toString().split('/').length - 1
   ];
 
+  if (!comment_text) {
+    document.querySelector('.error-text').textContent =
+      'Comment field cannot be empty.';
+    document.querySelector('textarea[name="comment-body"]').style.borderColor =
+      'red';
+  }
+
   if (comment_text) {
     const response = await fetch('/api/comments', {
       method: 'POST',
@@ -29,3 +36,10 @@ async function commentFormHandler(e) {
 document
   .querySelector('.comment-form')
   .addEventListener('submit', commentFormHandler);
+
+document
+  .querySelector('textarea[name="comment-body"]')
+  .addEventListener('input', () => {
+    document.querySelector('textarea[name="comment-body"]').style.borderColor =
+      '#ccc';
+  });

@@ -11,4 +11,12 @@ module.exports = {
     }
     return word;
   },
+
+  format_slug: (content) => {
+    if (content.length > 60) {
+      return content.slice(0, 60) + '... (Click title to read more).';
+    } else {
+      return content;
+    }
+  },
 };

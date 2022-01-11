@@ -11,6 +11,13 @@ async function signupFormHandler(e) {
     return;
   }
 
+  if (username.length > 30) {
+    document.querySelector('#username-signup').style.borderColor = 'red';
+    errMessageEl.textContent =
+      'Username cannot exceed 30 characters in length.';
+    return;
+  }
+
   if (!password) {
     document.querySelector('#password-signup').style.borderColor = 'red';
     errMessageEl.textContent = 'Password field must not be blank.';
