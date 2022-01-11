@@ -56,7 +56,8 @@ async function signupFormHandler(e) {
     if (response.ok) {
       document.location.replace('/dash');
     } else {
-      alert(response.statusText);
+      errMessageEl.textContent =
+        'Something went wrong. Try a different username.';
     }
   }
 }
