@@ -5,4 +5,3 @@ blogPosts.forEach((post, idx) => {
     post.style.opacity = '1';
   }, idx * 75);
 });
-v;
