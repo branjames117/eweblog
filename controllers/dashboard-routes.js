@@ -71,6 +71,11 @@ router.get('/edit/:id', withAuth, (req, res) => {
       // serialize the data
       const post = dbPostData.get({ plain: true });
 
+      // prevents non-postowner from reaching edit post page
+      if (post.user.username !== req.session.username) {
+        res.redirect('/');
+      }
+
       // pass data to template
       res.render('edit-post', {
         post,

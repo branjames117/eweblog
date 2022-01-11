@@ -11,16 +11,17 @@
       <label for='post-content'>Content</label>
       <textarea name='post-content'>{{post.content}}</textarea>
     <div>
+      <br />
       by you on
       {{format_date post.created_at}}
-      |
-      <a href='/post/{{post.id}}'>{{post.comments.length}}
-        {{format_plural 'comment' post.comments.length}}</a>
     </div>
     <button type='submit' class='edit-post-btn'>Save post</button>
     <button type='button' class='delete-post-btn'>Delete post</button>
   </form>
 </article>
+
+
+<a href='/post/{{post.id}}'>{{post.comments.length}} {{format_plural 'comment' post.comments.length}}</a>
 
 {{> comments post.comments }}
 
