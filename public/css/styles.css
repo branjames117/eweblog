@@ -36,7 +36,7 @@ pre {
 button {
   background-color: var(--primary-clr);
   border: 0;
-  padding: 1%;
+  padding: 12px;
   color: #000;
   font-weight: bold;
   transition: background-color 0.1s;
@@ -54,12 +54,12 @@ button:hover {
 }
 
 #edit-post-btn {
-  margin-bottom: 2%;
+  margin-bottom: 24px;
 }
 
 textarea,
 input {
-  padding: 0.5%;
+  padding: 6px;
   border-radius: 5px;
   border: 1px solid #ccc;
   min-width: 100%;
@@ -86,7 +86,7 @@ textarea {
 }
 
 form > div {
-  margin-bottom: 2%;
+  margin-bottom: 24px;
 }
 
 form label {
@@ -116,7 +116,7 @@ header h1 {
 
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 12px 24px;
 }
 
 ul {
@@ -150,13 +150,13 @@ ul {
 }
 
 .post {
-  margin-bottom: 2%;
+  margin-bottom: 25px;
   line-height: 150%;
 }
 
 .bullet {
   opacity: 0;
-  margin-bottom: 2%;
+  margin-bottom: 25px;
   line-height: 150%;
   transition: opacity 1s ease-out;
 }
@@ -164,26 +164,26 @@ ul {
 .post .title span,
 .bullet .title span {
   font-style: italic;
-  font-size: 90%;
+  font-size: 0.9rem;
   color: #7d7d7d;
 }
 
 .edit-link {
   display: block;
-  margin: -1.5% 0 2% 0;
+  margin: -18px 0 24px 0;
 }
 
 .comment-form {
-  margin-bottom: 5%;
+  margin-bottom: 60px;
 }
 
 .comment {
-  padding: 1%;
-  margin-bottom: 1%;
+  padding: 12px;
+  margin-bottom: 12px;
 }
 
 .comment:first-child {
-  margin-top: 2%;
+  margin-top: 24px;
 }
 
 .comment:nth-child(odd) {
@@ -191,8 +191,8 @@ ul {
 }
 
 .comment .meta {
-  font-size: 90%;
-  margin-bottom: 0.5%;
+  font-size: 1rem;
+  margin-bottom: 6px;
   opacity: 0.6;
 }
 
@@ -201,13 +201,13 @@ ul {
 }
 
 .edit-post-form {
-  margin-bottom: 5%;
+  margin-bottom: 60px;
 }
 
 footer {
   border-top: 1px solid var(--primary-clr);
   display: flex;
   justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+  padding: 12px;
+  font-size: 1.1rem;
 }
