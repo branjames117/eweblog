@@ -33,7 +33,7 @@ async function signupFormHandler(e) {
 
   if (!confirm) {
     document.querySelector('#confirm-signup').style.borderColor = 'red';
-    errMessageEl.textContent = 'Confirm password field must not be blank.';
+    errMessageEl.textContent = 'Confirm Password field must not be blank.';
     return;
   }
 
@@ -42,7 +42,7 @@ async function signupFormHandler(e) {
   if (!matchPasswords) {
     document.querySelector('#confirm-signup').style.borderColor = 'red';
     errMessageEl.textContent =
-      'Password and Confirm password fields do not match.';
+      'Password and Confirm Password fields do not match.';
     return;
   }
 
@@ -65,7 +65,7 @@ document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 
-const errMessageEl = document.querySelector('#error-message');
+const errMessageEl = document.querySelector('.error-text');
 
 document.querySelector('#username-signup').addEventListener('input', () => {
   document.querySelector('#username-signup').style.borderColor = '#ccc';

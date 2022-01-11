@@ -16,6 +16,12 @@ async function loginFormHandler(event) {
     return;
   }
 
+  if (password.length < 8) {
+    document.querySelector('#password-login').style.borderColor = 'red';
+    errMessageEl.textContent = 'Password must be 8 characters or longer.';
+    return;
+  }
+
   if (username && password) {
     const response = await fetch('/api/users/login', {
       method: 'post',
@@ -29,7 +35,8 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dash');
     } else {
-      alert(response.statusText);
+      errMessageEl.textContent =
+        'Something went wrong. Are you sure the username and password are correct?';
     }
   }
 }
@@ -38,7 +45,7 @@ document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
-const errMessageEl = document.querySelector('#error-message');
+const errMessageEl = document.querySelector('.error-text');
 
 document.querySelector('#username-login').addEventListener('input', () => {
   document.querySelector('#username-login').style.borderColor = '#ccc';
