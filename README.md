@@ -21,6 +21,8 @@ Install the source files with `git clone <url>`. Install dependencies with `npm 
 
 Begin the server with `node server`. Use Postman or Insomnia to test API routes. Sample website hosted on Heroku with JAWSDB [here](https://obscure-mesa-27013.herokuapp.com/).
 
+![Screenshot](./public/img/screenshot.jpg)
+
 ## License
 
 [The MIT License](https://mit-license.org/)
