@@ -19,4 +19,8 @@ module.exports = {
       return content;
     }
   },
+
+  user_owns_post: (sessionUsername, postUsername) => {
+    return sessionUsername === postUsername;
+  },
 };

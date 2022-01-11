@@ -1,4 +1,9 @@
-{{> full-post post}}
+{{> full-post post }}
+
+  {{#if (user_owns_post username post.user.username)}}
+  <button type='submit' id="edit-post-btn">edit post</button>
+  {{else}}
+  {{/if}}
 
 {{#if loggedIn}}
   <form class='comment-form'>
@@ -15,5 +20,6 @@
 {{> comments post.comments}}
 
 {{#if loggedIn}}
+  <script src="/js/edit-btn.js"></script>
   <script src='/js/comment.js'></script>
 {{/if}}

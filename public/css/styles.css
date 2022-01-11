@@ -53,6 +53,10 @@ button:hover {
   padding: 0;
 }
 
+#edit-post-btn {
+  margin-bottom: 2%;
+}
+
 textarea,
 input {
   padding: 0.5%;
