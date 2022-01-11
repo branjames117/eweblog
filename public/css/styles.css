@@ -158,7 +158,7 @@ ul {
   opacity: 0;
   margin-bottom: 2%;
   line-height: 150%;
-  transition: opacity 1s linear;
+  transition: opacity 1s ease-out;
 }
 
 .post .title span,
